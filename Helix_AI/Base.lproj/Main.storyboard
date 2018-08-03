@@ -1,24 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d7a-QB-fsq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="JhH-OQ-ILE">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="d7a-QB-fsq" customClass="ViewController" customModule="Villow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z7q-CJ-TDC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vilow_background" translatesAutoresizingMaskIntoConstraints="NO" id="WLb-Iw-zrU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jup-HS-gDT">
+                                <rect key="frame" x="16" y="37" width="343" height="441"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixD-UI-YKK">
+                                <rect key="frame" x="70" y="486" width="236" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="WLb-Iw-zrU" firstAttribute="bottom" secondItem="ckc-d4-IdV" secondAttribute="bottom" id="DZh-Hd-zyS"/>
+                            <constraint firstItem="WLb-Iw-zrU" firstAttribute="top" secondItem="Z7q-CJ-TDC" secondAttribute="top" id="EYT-fv-o2x"/>
+                            <constraint firstItem="ixD-UI-YKK" firstAttribute="leading" secondItem="ckc-d4-IdV" secondAttribute="leading" constant="70" id="Gnj-tL-JhQ"/>
+                            <constraint firstItem="Jup-HS-gDT" firstAttribute="leading" secondItem="Z7q-CJ-TDC" secondAttribute="leadingMargin" id="N3R-wj-W4H"/>
+                            <constraint firstItem="ixD-UI-YKK" firstAttribute="top" secondItem="Jup-HS-gDT" secondAttribute="bottom" constant="8" symbolic="YES" id="NE1-uU-jza"/>
+                            <constraint firstItem="Jup-HS-gDT" firstAttribute="top" secondItem="ckc-d4-IdV" secondAttribute="top" constant="17" id="OdG-bc-hg9"/>
+                            <constraint firstItem="Jup-HS-gDT" firstAttribute="centerX" secondItem="WLb-Iw-zrU" secondAttribute="centerX" id="YFa-OQ-egI"/>
+                            <constraint firstItem="WLb-Iw-zrU" firstAttribute="leading" secondItem="ckc-d4-IdV" secondAttribute="leading" id="aCR-s2-6Qe"/>
+                            <constraint firstItem="ixD-UI-YKK" firstAttribute="centerX" secondItem="Jup-HS-gDT" secondAttribute="centerX" id="kBd-iV-M61"/>
+                            <constraint firstItem="WLb-Iw-zrU" firstAttribute="trailing" secondItem="ckc-d4-IdV" secondAttribute="trailing" id="nqs-NP-oZf"/>
+                            <constraint firstItem="ckc-d4-IdV" firstAttribute="bottom" secondItem="Jup-HS-gDT" secondAttribute="bottom" constant="189" id="q4s-Xr-oqP"/>
+                            <constraint firstItem="ckc-d4-IdV" firstAttribute="bottom" secondItem="ixD-UI-YKK" secondAttribute="bottom" constant="136" id="wpR-Ee-d5T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ckc-d4-IdV"/>
                     </view>
+                    <connections>
+                        <outlet property="recordButton" destination="ixD-UI-YKK" id="xlF-9s-akC"/>
+                        <outlet property="resultsTextView" destination="Jup-HS-gDT" id="zkb-fM-NsI"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dXM-xn-Gz4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="100.29985007496252"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Vilow_background" width="562" height="1000"/>
+    </resources>
 </document>
